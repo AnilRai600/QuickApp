@@ -18,6 +18,7 @@ namespace DAL
         readonly ApplicationDbContext _context;
 
         ICustomerRepository _customers;
+        IStudentRepository _students;
         IProductRepository _products;
         IOrdersRepository _orders;
 
@@ -38,6 +39,18 @@ namespace DAL
                     _customers = new CustomerRepository(_context);
 
                 return _customers;
+            }
+        }
+
+        public IStudentRepository Students
+        {
+            get
+            {
+                if (_students == null)
+                    _students = new StudentsRepository(_context);
+
+                return _students;
+
             }
         }
 
@@ -67,8 +80,7 @@ namespace DAL
             }
         }
 
-
-
+       
 
         public int SaveChanges()
         {

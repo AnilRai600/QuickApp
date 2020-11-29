@@ -55,6 +55,9 @@ namespace QuickApp.ViewModels
             CreateMap<Customer, CustomerViewModel>()
                 .ReverseMap();
 
+            CreateMap<Student, StudentViewModel>()
+                .ReverseMap();
+
             CreateMap<Product, ProductViewModel>()
                 .ReverseMap();
 
