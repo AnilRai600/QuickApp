@@ -349,7 +349,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.accountService.userHasPermission(Permission.viewUsersPermission); // eg. viewProductsPermission
   }
 
-  get canViewOrders() {
+  get canViewStudents() {
     return true; // eg. viewOrdersPermission
   }
+
 }

@@ -62,6 +62,9 @@ import { UserPreferencesComponent } from './components/controls/user-preferences
 import { UsersManagementComponent } from './components/controls/users-management.component';
 import { RolesManagementComponent } from './components/controls/roles-management.component';
 import { RoleEditorComponent } from './components/controls/role-editor.component';
+import { StudentComponent } from './components/student/student.component';
+import { StudentService } from './services/student.service';
+import { StudentEndPoint } from './services/student-endpoint.service';
 
 
 @NgModule({
@@ -108,7 +111,8 @@ import { RoleEditorComponent } from './components/controls/role-editor.component
     AutofocusDirective,
     BootstrapTabDirective,
     BootstrapToggleDirective,
-    GroupByPipe
+    GroupByPipe,
+    StudentComponent
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler },
@@ -122,7 +126,9 @@ import { RoleEditorComponent } from './components/controls/role-editor.component
     AccountService,
     AccountEndpoint,
     LocalStoreManager,
-    OidcHelperService
+    OidcHelperService,
+    StudentService,
+    StudentEndPoint
   ],
   bootstrap: [AppComponent]
 })

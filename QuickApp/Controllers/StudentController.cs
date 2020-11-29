@@ -28,7 +28,7 @@ namespace QuickApp.Controllers
 
         // GET: api/students
         [HttpGet]
-        public IActionResult GetStudents()
+        public IActionResult StudentPage()
         {
             var allStudents =  _unitOfWork.Students.GetAll().ToList();
             return Ok(_mapper.Map<IEnumerable<StudentViewModel>>(allStudents));
