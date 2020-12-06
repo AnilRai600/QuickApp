@@ -65,6 +65,7 @@ import { RoleEditorComponent } from './components/controls/role-editor.component
 import { StudentComponent } from './components/student/student.component';
 import { StudentService } from './services/student.service';
 import { StudentEndPoint } from './services/student-endpoint.service';
+import { HomePageComponent } from '../app/components/website/home/home-page.component';
 
 
 @NgModule({
@@ -112,7 +113,8 @@ import { StudentEndPoint } from './services/student-endpoint.service';
     BootstrapTabDirective,
     BootstrapToggleDirective,
     GroupByPipe,
-    StudentComponent
+    StudentComponent,
+    HomePageComponent
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler },

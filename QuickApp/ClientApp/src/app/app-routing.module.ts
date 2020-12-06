@@ -18,6 +18,7 @@ import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth-guard.service';
 import { Utilities } from './services/utilities';
 import { StudentComponent } from './components/student/student.component';
+import { HomePageComponent } from './components/website/home/home-page.component';
 
 
 
@@ -44,15 +45,18 @@ export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
 
 
 const routes: Routes = [
-    { path: '', component: HomeComponent, canActivate: [AuthGuard], data: { title: 'Home' } },
-    { path: 'login', component: LoginComponent, data: { title: 'Login' } },
+    //{ path: '', component: HomeComponent, canActivate: [AuthGuard], data: { title: 'Home' } },
+
+  { path: '', component: HomePageComponent,  data: { title: 'Home' } },
+  { path: 'login', component: LoginComponent, data: { title: 'Login' } },
+  { path: 'homepage', component: HomePageComponent, data: { title: 'HomePage' } },
     { path: 'customers', component: CustomersComponent, canActivate: [AuthGuard], data: { title: 'Customers' } },
   { path: 'products', component: ProductsComponent, canActivate: [AuthGuard], data: { title: 'Products' } },
   { path: 'students', component: StudentComponent, canActivate: [AuthGuard], data: { title: 'Student' } },
     { path: 'orders', component: OrdersComponent, canActivate: [AuthGuard], data: { title: 'Orders' } },
     { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard], data: { title: 'Settings' } },
     { path: 'about', component: AboutComponent, data: { title: 'About Us' } },
-  { path: 'home', redirectTo: '/', pathMatch: 'full' },
+  { path: 'homepage', redirectTo: '/', pathMatch: 'full' },
  
     { path: '**', component: NotFoundComponent, data: { title: 'Page Not Found' } }
 ];
